@@ -2,3 +2,5 @@ node_modules
 /dist/main.js
 /dist/*LICENSE*
 package-lock.json
+webpack
+webpack@1.0.0
