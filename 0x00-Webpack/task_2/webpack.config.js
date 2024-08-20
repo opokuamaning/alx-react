@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  mode: "production", // Set the mode to production
+  mode: "production",
   entry: {
     main: path.resolve(__dirname, "./js/dashboard_main.js"),
   },
@@ -9,34 +9,26 @@ module.exports = {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   module: {
     rules: [
-      // Rule for CSS files
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
-      // Rule for image files
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/resource",
+        test: /\.(gif|png|jp?g|svg)$/i,
         use: [
+          "file-loader",
           {
             loader: "image-webpack-loader",
             options: {
-              mozjpeg: {
-                progressive: true,
-              },
-              optipng: {
-                enabled: true,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
+              bypassOnDebug: true,
+              disable: true,
             },
           },
         ],
