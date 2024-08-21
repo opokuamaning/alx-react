@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./holberton-logo.jpg";
 import "./App.css";
-import { getFullYear, getFooterCopy } from "./utils";
+import { getFullYear, getFooterCopy, getLatestNotification } from "./utils";
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
         </label>
         <button>Okay</button>
       </div>
-      <div className="App-footer">
+      <div className="App-footer">3
         <p>
           Copyright {getFullYear()} - {getFooterCopy()}
         </p>
