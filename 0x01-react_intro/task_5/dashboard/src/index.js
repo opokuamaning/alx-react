@@ -1,4 +1,14 @@
-import "./styles.css";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App/App";
+import Notifications from "./Notifications/Notifications";
 
-const root = document.getElementById("root");
-root.innerHTML = "<h1>Hello, Webpack!</h1>";
+ReactDOM.render(
+  <React.StrictMode>
+    <div id="root-notifications">
+      <Notifications />
+    </div>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
