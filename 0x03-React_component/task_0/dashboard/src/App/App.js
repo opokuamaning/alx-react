@@ -8,7 +8,7 @@ import "./App.css";
 import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils";
 
-class App extends React.Component {
+class App extends React.component {
   listCourses = [
     { id: 1, name: "ES6", credit: 60 },
     { id: 2, name: "Webpack", credit: 20 },
