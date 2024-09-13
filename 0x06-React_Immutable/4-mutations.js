@@ -1,4 +1,4 @@
-import {Map} from 'immutable';
+import { Map } from "immutable";
 
 export const map = Map({
   1: "Liam",
@@ -9,6 +9,6 @@ export const map = Map({
   6: "Lucas",
 });
 
-export const map2 = map.withMutation((values)=>{
-    values.set(2, "Benjamin").set(4, "Olivia");
+export const map2 = map.withMutations((values) => {
+  values.set(2, "Benjamin").set(4, "Oliver");
 });
